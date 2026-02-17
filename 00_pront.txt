@@ -1,0 +1,14 @@
+
+---
+
+## 💡 Prompt Diario Adaptado
+```
+Hoy tengo 30 minutos. Estoy en [Semana X, Día X] enfocándome en optimización y análisis de datos.
+
+Dame:
+1. Concepto del día (5 min) relacionado con automatización/data
+2. Script o código práctico (15 min) que resuelva un problema real
+3. Mini-reto para extender el concepto (10 min)
+4. Qué commitear
+
+Contexto: Quiero automatizar procesos y analizar datos. Ejemplos reales, nada teórico.
