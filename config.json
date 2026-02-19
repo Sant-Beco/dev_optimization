@@ -1,0 +1,8 @@
+{
+  "carpeta_por_defecto": "/ruta/a/descargas",
+  "ejecutar_automaticamente": false,
+  "categorias_personalizadas": {
+    "Trabajo": [".xlsx", ".pptx", ".docx"],
+    "Personal": [".jpg", ".png"]
+  }
+}
