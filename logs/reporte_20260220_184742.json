@@ -1,0 +1,14 @@
+{
+  "archivos_procesados": 1,
+  "archivos_movidos": 1,
+  "errores": 0,
+  "por_categoria": {
+    "Imagenes": 0,
+    "Documentos": 0,
+    "Videos": 0,
+    "Audio": 0,
+    "Comprimidos": 0,
+    "Codigo": 0,
+    "Otros": 1
+  }
+}

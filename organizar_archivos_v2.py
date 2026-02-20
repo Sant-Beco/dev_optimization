@@ -146,7 +146,7 @@ class OrganizadorArchivos:
 # ============================================C:\Users\Usuario\Downloads
 if __name__ == "__main__":
     # Configuración
-    CARPETA_A_ORGANIZAR =  r"C:\Users\Usuario\Downloads\Documentos"
+    CARPETA_A_ORGANIZAR =  r"C:\Users\Usuario\Downloads"
     
     print("\n🚀 ORGANIZADOR DE ARCHIVOS v2.0")
     print("="*50)

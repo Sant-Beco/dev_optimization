@@ -1,0 +1,16 @@
+[2026-02-20 18:47:42] INFO: Iniciando organización de: C:\Users\Usuario\Downloads
+[2026-02-20 18:47:42] INFO: Carpetas de categorías creadas
+[2026-02-20 18:47:42] INFO: Archivos encontrados: 1
+[2026-02-20 18:47:42] SUCCESS: Movido: desktop.ini → Otros/
+[2026-02-20 18:47:42] INFO: 
+==================================================
+[2026-02-20 18:47:42] INFO: REPORTE FINAL DE ORGANIZACIÓN
+[2026-02-20 18:47:42] INFO: ==================================================
+[2026-02-20 18:47:42] INFO: Archivos procesados: 1
+[2026-02-20 18:47:42] INFO: Archivos movidos: 1
+[2026-02-20 18:47:42] INFO: Errores: 0
+[2026-02-20 18:47:42] INFO: 
+Por categoría:
+[2026-02-20 18:47:42] INFO:   - Otros: 1 archivo(s)
+[2026-02-20 18:47:42] INFO: 
+Reporte guardado en: logs/reporte_20260220_184742.json
