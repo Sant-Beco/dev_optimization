@@ -1,0 +1,17 @@
+{
+  "carpeta": "C:\\Users\\Usuario\\Downloads\\Documentos\\Documentos",
+  "timestamp": "20260221_191435",
+  "modo": "ejecucion",
+  "archivos_procesados": 104,
+  "archivos_movidos": 104,
+  "errores": 0,
+  "por_categoria": {
+    "Imagenes": 0,
+    "Documentos": 104,
+    "Videos": 0,
+    "Audio": 0,
+    "Comprimidos": 0,
+    "Codigo": 0,
+    "Otros": 0
+  }
+}
