@@ -12,3 +12,15 @@ Dame:
 4. Qué commitear
 
 Contexto: Quiero automatizar procesos y analizar datos. Ejemplos reales, nada teórico.
+
+$ git log --oneline --graph --all
+
+* cf890c8 (HEAD -> main, origin/main) Subiendo prueba, del testing
+
+* 78db5fd Día 2: Organizador v2 con logs, manejo de errores y reportes JSON
+
+* ea3635b Subiendo organizar archivos v2 pero falta enterdelo y probarlo ademas de actualizar readme
+
+* 5fd78d4 subiendo pront util
+
+* a0b4992 Día 1: Primer script de automatización - Organizador de archivos 
