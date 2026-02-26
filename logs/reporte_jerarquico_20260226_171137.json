@@ -1,0 +1,24 @@
+{
+  "timestamp": "20260226_171137",
+  "modo": "ejecucion",
+  "archivos_procesados": 0,
+  "archivos_movidos": 0,
+  "errores": 0,
+  "por_categoria": {},
+  "por_subcategoria": {
+    "Imagenes/Fotos": 0,
+    "Imagenes/Graficos": 0,
+    "Imagenes/Animaciones": 0,
+    "Documentos/PDFs": 0,
+    "Documentos/Excel": 0,
+    "Documentos/Word": 0,
+    "Documentos/Presentaciones": 0,
+    "Documentos/Textos": 0,
+    "Multimedia/Videos": 0,
+    "Multimedia/Audio": 0,
+    "Archivos/Comprimidos": 0,
+    "Archivos/Codigo": 0,
+    "Archivos/Ejecutables": 0,
+    "Otros": 0
+  }
+}

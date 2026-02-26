@@ -50,6 +50,22 @@ class DashboardOrganizador:
         print(f"✅ Cargados {len(self.datos)} reportes\n")
         return True
     
+    # Agregar después de def cargar_datos():
+    def analizar_subcategorias(self):
+        """Analiza reportes jerárquicos"""
+        archivos = list(self.reportes_path.glob("reporte_jerarquico_*.json"))
+
+        if archivos:
+            ultimo = max(archivos, key=os.path.getctime)
+            with open(ultimo, 'r') as f:
+                data = json.load(f)
+
+            print("\n📊 Análisis de subcategorías:")
+            for ubicacion, cant in sorted(data['por_subcategoria'].items(), 
+                                          key=lambda x: x[1], reverse=True):
+                if cant > 0:
+                    print(f"  {ubicacion}: {cant}")
+                    
     def resumen_general(self):
         """Muestra estadísticas generales"""
         print("="*60)
