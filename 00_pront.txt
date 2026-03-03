@@ -1,15 +1,19 @@
-
----
-
-## 💡 Prompt Diario Adaptado
+## 📝 Prompt Diario Actualizado
 ```
-Hoy tengo 30 minutos. Estoy en [Semana X, Día X] enfocándome en optimización y análisis de datos.
+Hoy tengo [X] minutos. Estoy en [Semana Y, Día Z].
+
+FORMATO HÍBRIDO:
+- 10 min: Concepto teórico (fundamentos computacionales)
+- 15 min: Código práctico (aplicación del concepto)
+- 5 min: Reflexión + commit
 
 Dame:
-1. Concepto del día (5 min) relacionado con automatización/data
-2. Script o código práctico (15 min) que resuelva un problema real
-3. Mini-reto para extender el concepto (10 min)
-4. Qué commitear
+1. Concepto clave del día (fundamento + por qué importa)
+2. Código que DEMUESTRA el concepto (no solo usa, sino visualiza/explica)
+3. Challenge para verificar comprensión
+4. Qué documentar y commitear
 
+Contexto: Automatización + análisis de datos + fundamentos sólidos.
+Plan: 48 semanas híbrido teoría/práctica.
 Contexto: Quiero automatizar procesos y analizar datos. Ejemplos reales, nada teórico.
 

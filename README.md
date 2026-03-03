@@ -53,3 +53,29 @@ Documentos/
 ### Próxima optimización:
 - Organizar por fecha de creación
 - Detección de contenido (facturas, reportes)
+
+## Día 6: Limpieza y Análisis de CSV
+
+### Problema resuelto:
+- Procesar CSVs sucios del mundo real
+- Detectar y limpiar automáticamente: fechas, precios, porcentajes
+- Eliminar duplicados y manejar nulos
+
+### Capacidades del limpiador:
+- ✅ Detección automática de encoding
+- ✅ Normalización de nombres de columnas
+- ✅ Eliminación de duplicados
+- ✅ Limpieza de precios: "$1,234.56" → 1234.56
+- ✅ Conversión de fechas a formato estándar
+- ✅ Manejo inteligente de nulos
+- ✅ Generación de estadísticas descriptivas
+- ✅ Reporte de cambios realizados
+
+### Aprendido:
+- ETL (Extract, Transform, Load)
+- Pandas: dropna(), drop_duplicates(), to_datetime()
+- Regex para limpieza de strings
+- Detección automática de tipos de datos
+
+### Resultado:
+CSV limpio listo para análisis o importar a Excel/SQL

@@ -1,0 +1,12 @@
+REPORTE DE LIMPIEZA - 2026-03-03 04:17:15
+======================================================================
+
+Archivo original: .\LOTE 39 (100)(MOVIMIENTO HUEVO).csv
+Filas originales: 456
+Columnas originales: 1
+Filas finales: 319
+Columnas finales: 1
+
+CAMBIOS REALIZADOS:
+  • Nombres de columnas normalizados
+  • Eliminadas 137 filas duplicadas
