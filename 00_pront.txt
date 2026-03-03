@@ -15,5 +15,5 @@ Dame:
 
 Contexto: Automatización + análisis de datos + fundamentos sólidos.
 Plan: 48 semanas híbrido teoría/práctica.
-Contexto: Quiero automatizar procesos y analizar datos. Ejemplos reales, nada teórico.
+Contexto: Quiero automatizar procesos y analizar datos. Ejemplos reales, dame un contexto.
 
