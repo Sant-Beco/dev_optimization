@@ -144,3 +144,6 @@ Limpiador especializado que:
 *"En 7 días pasé de 0 a tener herramientas que uso diariamente.
 El enfoque de 'aprender haciendo' funciona. Cada script resuelve
 un problema real de mi trabajo."*
+
+
+### semana 2 dia 2 listo
