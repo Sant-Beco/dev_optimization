@@ -1,19 +1,22 @@
-## 📝 Prompt Diario Actualizado
-```
 Hoy tengo [X] minutos. Estoy en [Semana Y, Día Z].
 
 FORMATO HÍBRIDO:
-- 10 min: Concepto teórico (fundamentos computacionales)
-- 15 min: Código práctico (aplicación del concepto)
-- 5 min: Reflexión + commit
+- Teoría: [X/3] min
+- Práctica: [2X/3] min  
+- Reflexión: [X/10] min
 
 Dame:
-1. Concepto clave del día (fundamento + por qué importa)
-2. Código que DEMUESTRA el concepto (no solo usa, sino visualiza/explica)
-3. Challenge para verificar comprensión
-4. Qué documentar y commitear
+1. Concepto clave (fundamento + aplicación real a mi granja)
+2. Código que DEMUESTRA (no solo usa) el concepto
+3. Challenge express para verificar
+4. Qué commitear
 
-Contexto: Automatización + análisis de datos + fundamentos sólidos.
-Plan: 48 semanas híbrido teoría/práctica.
-Contexto: Quiero automatizar procesos y analizar datos. Ejemplos reales, dame un contexto.
+Contexto: 
+- Granja avícola con datos de producción/mortalidad
+- Automatizar procesos + análisis de datos
+- Fundamentos sólidos (48 semanas)
+- Aprendizaje híbrido teoría/práctica
+- Automatización y seguridad de un sistema
+
+Estilo: Ejemplos reales, código ejecutable, cero teoría abstracta.
 
