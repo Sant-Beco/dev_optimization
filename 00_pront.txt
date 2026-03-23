@@ -4,15 +4,16 @@ FORMATO HÍBRIDO:
 - Teoría: [X/3] min
 - Práctica: [2X/3] min  
 - Reflexión: [X/10] min
+- Ejemplo de niño de 5 años
 
 Dame:
 1. Concepto clave (fundamento + aplicación real a mi granja)
 2. Código que DEMUESTRA (no solo usa) el concepto
 3. Challenge express para verificar
-4. Qué commitear
+4. Qué commitear simple
 
 Contexto: 
-- Granja avícola con datos de producción/mortalidad
+- Granja avícola con datos de producción/mortalidad manejo saldo aves
 - Automatizar procesos + análisis de datos
 - Fundamentos sólidos (48 semanas)
 - Aprendizaje híbrido teoría/práctica
