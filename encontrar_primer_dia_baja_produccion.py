@@ -10,7 +10,7 @@ def encontrar_primer_dia_baja_produccion(registros_ordenados, umbral=8500):
     # Búsqueda binaria en fechas
     izquierda = 0
     derecha = len(registros_ordenados) - 1
-    comparaciones = 0
+    resultado = None
         
     while izquierda <= derecha:
             medio = (izquierda + derecha) // 2
