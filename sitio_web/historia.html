@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de la Automatización | Mi Viaje</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/historia.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="logo-emoji">🤖</span>
+                    <span class="logo-text">AutoDoc</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia-completa.html" class="active">Historia</a></li>
+                <li><a href="../index.html#mi-viaje">Mi Viaje</a></li>
+                <li><a href="../index.html#proyectos">Proyectos</a></li>
+                <li><a href="conceptos.html">Conceptos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Histórico -->
+    <section class="hero-historia">
+        <div class="container">
+            <h1 class="hero-title">
+                Historia de la <span class="highlight">Automatización</span>
+            </h1>
+            <p class="hero-subtitle">
+                De las tarjetas perforadas de 1801 a la inteligencia artificial de hoy:<br>
+                223 años transformando cómo los humanos trabajamos
+            </p>
+            <div class="hero-timeline-nav">
+                <button class="era-btn" data-era="industrial">🏭 Era Industrial</button>
+                <button class="era-btn" data-era="digital">💻 Era Digital</button>
+                <button class="era-btn" data-era="moderna">🤖 Era Moderna</button>
+                <button class="era-btn active" data-era="todas">📚 Ver Todo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Definición Expandida -->
+    <section class="section">
+        <div class="container">
+            <div class="definition-expanded">
+                <h2>¿Qué es la Automatización?</h2>
+                <div class="definition-grid">
+                    <div class="def-card">
+                        <div class="def-icon">📖</div>
+                        <h3>Definición Formal</h3>
+                        <p><strong>Automatización</strong> (del griego αὐτόματος <em>autómatos</em>, 
+                        "que actúa por sí mismo") es el uso de sistemas de control y tecnologías de 
+                        información para reducir la necesidad de trabajo humano en la producción de 
+                        bienes y servicios.</p>
+                    </div>
+                    
+                    <div class="def-card">
+                        <div class="def-icon">🎯</div>
+                        <h3>Definición Simple</h3>
+                        <p>Hacer que las máquinas realicen tareas repetitivas sin que un humano 
+                        tenga que estar presente constantemente. Como un piloto automático para 
+                        tu trabajo.</p>
+                    </div>
+                    
+                    <div class="def-card">
+                        <div class="def-icon">🌾</div>
+                        <h3>En Mi Granja</h3>
+                        <p>Transformar: "Contar 9,000 huevos a mano cada día" en "Ejecutar script 
+                        que lee sensor y genera reporte automático". De 3 horas a 3 segundos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personas Influyentes -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Personas que Cambiaron la Historia</h2>
+            <p class="section-subtitle">Visionarios que imaginaron un mundo automatizado antes que existiera</p>
+            
+            <div class="personas-grid">
+                <!-- Joseph Marie Jacquard -->
+                <div class="persona-card" data-era="industrial">
+                    <div class="persona-header">
+                        <div class="persona-avatar">👨‍🏭</div>
+                        <div class="persona-info">
+                            <h3>Joseph Marie Jacquard</h3>
+                            <span class="persona-years">1752 - 1834</span>
+                            <span class="persona-role">Inventor del Telar Programable</span>
+                        </div>
+                    </div>
+                    <div class="persona-content">
+                        <p><strong>Impacto:</strong> Creó el primer sistema programable usando tarjetas 
+                        perforadas. Los patrones de tejido se "codificaban" en tarjetas que la máquina 
+                        leía automáticamente.</p>
+                        
+                        <div class="persona-achievement">
+                            <span class="achievement-label">Innovación clave:</span>
+                            <p>Separación entre <em>instrucciones</em> (tarjetas) y <em>máquina</em> (telar). 
+                            Este concepto es la base de toda la programación moderna.</p>
+                        </div>
+                        
+                        <div class="persona-legacy">
+                            <strong>Legado:</strong> Las tarjetas perforadas se usaron hasta los años 1970 
+                            en computadoras IBM. Su invención salvó miles de empleos al hacer la industria 
+                            textil más competitiva.
+                        </div>
+                        
+                        <div class="persona-quote">
+                            "Las tarjetas me recuerdan que puedo cambiar de idea sin cambiar la máquina."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ada Lovelace -->
+                <div class="persona-card featured" data-era="industrial">
+                    <div class="persona-badge">Primera Programadora</div>
+                    <div class="persona-header">
+                        <div class="persona-avatar">👩‍💻</div>
+                        <div class="persona-info">
+                            <h3>Ada Lovelace</h3>
+                            <span class="persona-years">1815 - 1852</span>
+                            <span class="persona-role">Matemática y Primera Programadora</span>
+                        </div>
+                    </div>
+                    <div class="persona-content">
+                        <p><strong>Impacto:</strong> Escribió el primer algoritmo destinado a ser ejecutado 
+                        por una máquina (el Motor Analítico de Charles Babbage). Vio el potencial de las 
+                        computadoras más allá de solo calcular números.</p>
+                        
+                        <div class="persona-achievement">
+                            <span class="achievement-label">Visión revolucionaria:</span>
+                            <p>Predijo que las máquinas podrían componer música, crear arte y procesar 
+                            símbolos, no solo números. Esta visión tardó 100 años en realizarse.</p>
+                        </div>
+                        
+                        <div class="persona-code">
+                            <strong>Su algoritmo (1843):</strong>
+                            <pre><code>// Calcular números de Bernoulli
+// Primer "programa" de la historia
+Paso 1: Inicializar variables
+Paso 2: Loop mientras n < límite
+Paso 3: Calcular B(n) usando fórmula
+Paso 4: Almacenar resultado
+Paso 5: Incrementar n</code></pre>
+                        </div>
+                        
+                        <div class="persona-legacy">
+                            <strong>Legado:</strong> El lenguaje de programación Ada (usado en sistemas 
+                            críticos de aviación y defensa) lleva su nombre. Octubre es el "Ada Lovelace Day" 
+                            que celebra a mujeres en tecnología.
+                        </div>
+                        
+                        <div class="persona-quote">
+                            "El Motor Analítico puede actuar sobre otras cosas además de números... 
+                            La ciencia de las operaciones se derivaría en una ciencia abstracta."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Henry Ford -->
+                <div class="persona-card" data-era="industrial">
+                    <div class="persona-header">
+                        <div class="persona-avatar">🚗</div>
+                        <div class="persona-info">
+                            <h3>Henry Ford</h3>
+                            <span class="persona-years">1863 - 1947</span>
+                            <span class="persona-role">Pionero de la Producción en Masa</span>
+                        </div>
+                    </div>
+                    <div class="persona-content">
+                        <p><strong>Impacto:</strong> Revolucionó la manufactura con la línea de ensamblaje 
+                        móvil en 1913. Redujo el tiempo de construcción del Model T de 12 horas a 93 minutos.</p>
+                        
+                        <div class="persona-stats">
+                            <div class="stat">
+                                <span class="stat-value">12h → 93min</span>
+                                <span class="stat-label">Tiempo de producción</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">$850 → $260</span>
+                                <span class="stat-label">Precio del auto</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">88%</span>
+                                <span class="stat-label">Reducción de tiempo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="persona-achievement">
+                            <span class="achievement-label">Innovación social:</span>
+                            <p>Pagó a sus trabajadores $5/día (el doble del promedio) para que pudieran 
+                            comprar los autos que fabricaban. Creó la clase media industrial moderna.</p>
+                        </div>
+                        
+                        <div class="persona-legacy">
+                            <strong>Legado:</strong> Sus principios (estandarización, especialización, 
+                            flujo continuo) se aplican hoy en software development (CI/CD, DevOps).
+                        </div>
+                        
+                        <div class="persona-quote">
+                            "Si le hubiera preguntado a la gente qué querían, habrían dicho caballos más rápidos."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- George Devol -->
+                <div class="persona-card" data-era="digital">
+                    <div class="persona-header">
+                        <div class="persona-avatar">🤖</div>
+                        <div class="persona-info">
+                            <h3>George Devol</h3>
+                            <span class="persona-years">1912 - 2011</span>
+                            <span class="persona-role">Inventor del Robot Industrial</span>
+                        </div>
+                    </div>
+                    <div class="persona-content">
+                        <p><strong>Impacto:</strong> Inventó Unimate en 1954, el primer robot industrial 
+                        programable. Instalado en General Motors en 1961 para manejar piezas de metal caliente.</p>
+                        
+                        <div class="persona-achievement">
+                            <span class="achievement-label">Tecnología clave:</span>
+                            <p>Brazo mecánico controlado por computadora que podía repetir movimientos 
+                            precisos. Memoria magnética almacenaba 180 pasos diferentes.</p>
+                        </div>
+                        
+                        <div class="persona-stats">
+                            <div class="stat">
+                                <span class="stat-value">450kg</span>
+                                <span class="stat-label">Peso levantado</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">24/7</span>
+                                <span class="stat-label">Operación continua</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">±0.05mm</span>
+                                <span class="stat-label">Precisión</span>
+                            </div>
+                        </div>
+                        
+                        <div class="persona-legacy">
+                            <strong>Legado:</strong> Hoy hay más de 3 millones de robots industriales 
+                            trabajando globalmente. La industria de robótica vale $50 mil millones anuales.
+                        </div>
+                        
+                        <div class="persona-quote">
+                            "Un robot puede hacer el trabajo de tres hombres, pero nunca reemplazará a uno."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tim Berners-Lee -->
+                <div class="persona-card" data-era="digital">
+                    <div class="persona-header">
+                        <div class="persona-avatar">🌐</div>
+                        <div class="persona-info">
+                            <h3>Tim Berners-Lee</h3>
+                            <span class="persona-years">1955 - Presente</span>
+                            <span class="persona-role">Inventor de la World Wide Web</span>
+                        </div>
+                    </div>
+                    <div class="persona-content">
+                        <p><strong>Impacto:</strong> Inventó la Web en 1989 en el CERN. Creó HTTP, HTML, 
+                        y el primer navegador. Hizo posible la automatización distribuida globalmente.</p>
+                        
+                        <div class="persona-achievement">
+                            <span class="achievement-label">Decisión crucial:</span>
+                            <p>Decidió NO patentar la Web. La regaló al mundo gratuitamente. Esta decisión 
+                            permitió la explosión de innovación digital que vivimos hoy.</p>
+                        </div>
+                        
+                        <div class="persona-code">
+                            <strong>Primera página web (1991):</strong>
+                            <pre><code>&lt;HEADER&gt;
+&lt;TITLE&gt;World Wide Web&lt;/TITLE&gt;
+&lt;/HEADER&gt;
+&lt;BODY&gt;
+&lt;H1&gt;World Wide Web&lt;/H1&gt;
+The WorldWideWeb (W3) is a wide-area
+hypermedia information retrieval 
+initiative...
+&lt;/BODY&gt;</code></pre>
+                        </div>
+                        
+                        <div class="persona-legacy">
+                            <strong>Legado:</strong> 5.3 mil millones de usuarios de internet (67% de la 
+                            humanidad). La web genera $4.5 trillones anuales en valor económico.
+                        </div>
+                        
+                        <div class="persona-quote">
+                            "La Web no conecta computadoras, conecta personas."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elon Musk -->
+                <div class="persona-card" data-era="moderna">
+                    <div class="persona-header">
+                        <div class="persona-avatar">🚀</div>
+                        <div class="persona-info">
+                            <h3>Elon Musk</h3>
+                            <span class="persona-years">1971 - Presente</span>
+                            <span class="persona-role">Visionario de Automatización Extrema</span>
+                        </div>
+                    </div>
+                    <div class="persona-content">
+                        <p><strong>Impacto:</strong> Llevó la automatización a niveles extremos en Tesla 
+                        (fábrica con robots que construyen robots) y SpaceX (cohetes que aterrizan solos).</p>
+                        
+                        <div class="persona-achievement">
+                            <span class="achievement-label">Visión actual:</span>
+                            <p>Construir robots humanoides (Optimus) que realicen trabajo físico peligroso 
+                            o repetitivo. Meta: fabricar 1,000 millones de robots para 2040.</p>
+                        </div>
+                        
+                        <div class="persona-stats">
+                            <div class="stat">
+                                <span class="stat-value">95%</span>
+                                <span class="stat-label">Automatización Tesla</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">$20K</span>
+                                <span class="stat-label">Precio objetivo Optimus</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">100%</span>
+                                <span class="stat-label">Cohetes autónomos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="persona-legacy">
+                            <strong>Controversia:</strong> Critica la automatización excesiva cuando falla. 
+                            En 2018 admitió: "Sí, la automatización excesiva en Tesla fue un error. Los 
+                            humanos están subestimados."
+                        </div>
+                        
+                        <div class="persona-quote">
+                            "La automatización es inevitable. La pregunta es: ¿cómo nos preparamos como sociedad?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Interactiva Detallada -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Línea de Tiempo Interactiva</h2>
+            <p class="section-subtitle">Explora 223 años de innovación</p>
+            
+            <div class="timeline-interactive">
+                <!-- 1801 - Telar Jacquard -->
+                <div class="timeline-event" data-year="1801" data-era="industrial">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-detailed">
+                        <div class="timeline-header">
+                            <span class="timeline-year">1801</span>
+                            <span class="timeline-category">🧵 Textil</span>
+                        </div>
+                        <h3>Telar de Jacquard</h3>
+                        <p><strong>Inventor:</strong> Joseph Marie Jacquard</p>
+                        <p>Primer sistema programable usando tarjetas perforadas. Revolucionó la 
+                        industria textil francesa.</p>
+                        <div class="timeline-impact">
+                            <strong>Impacto:</strong> Reducción de 80% en tiempo de producción de 
+                            patrones complejos. Concepto de "programa" separado de "hardware".
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1842 - Ada Lovelace -->
+                <div class="timeline-event featured-event" data-year="1842" data-era="industrial">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-detailed">
+                        <div class="timeline-header">
+                            <span class="timeline-year">1842</span>
+                            <span class="timeline-category">💻 Computación</span>
+                            <span class="timeline-badge">Milestone</span>
+                        </div>
+                        <h3>Primer Algoritmo de la Historia</h3>
+                        <p><strong>Creadora:</strong> Ada Lovelace</p>
+                        <p>Escribió notas sobre el Motor Analítico de Babbage que incluían el primer 
+                        algoritmo para calcular números de Bernoulli.</p>
+                        <div class="timeline-impact">
+                            <strong>Impacto:</strong> Primer "programa" de computadora, 100 años antes 
+                            de que existieran computadoras electrónicas. Visionó IA antes de 1900.
+                        </div>
+                        <div class="timeline-quote">
+                            "La máquina podría componer música elaborada y científica de cualquier grado 
+                            de complejidad."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1913 - Ford -->
+                <div class="timeline-event" data-year="1913" data-era="industrial">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-detailed">
+                        <div class="timeline-header">
+                            <span class="timeline-year">1913</span>
+                            <span class="timeline-category">🚗 Automotriz</span>
+                        </div>
+                        <h3>Línea de Ensamblaje de Ford</h3>
+                        <p><strong>Innovador:</strong> Henry Ford</p>
+                        <p>Introducción de la cinta transportadora móvil para ensamblar el Model T.</p>
+                        <div class="timeline-stats">
+                            <div><strong>Antes:</strong> 12.5 horas/auto</div>
+                            <div><strong>Después:</strong> 93 minutos/auto</div>
+                            <div><strong>Mejora:</strong> 88% más rápido</div>
+                        </div>
+                        <div class="timeline-impact">
+                            <strong>Impacto:</strong> Democratizó el automóvil. En 1927, se habían vendido 
+                            15 millones de Model T (la mitad de todos los autos del mundo).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1961 - Unimate -->
+                <div class="timeline-event" data-year="1961" data-era="digital">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-detailed">
+                        <div class="timeline-header">
+                            <span class="timeline-year">1961</span>
+                            <span class="timeline-category">🤖 Robótica</span>
+                        </div>
+                        <h3>Unimate - Primer Robot Industrial</h3>
+                        <p><strong>Inventor:</strong> George Devol</p>
+                        <p>Instalado en General Motors para manipular piezas fundidas calientes.</p>
+                        <div class="timeline-stats">
+                            <div><strong>Carga:</strong> 450 kg</div>
+                            <div><strong>Precisión:</strong> ±0.05mm</div>
+                            <div><strong>Costo:</strong> $25,000 (1961)</div>
+                        </div>
+                        <div class="timeline-impact">
+                            <strong>Impacto:</strong> Inicio de la robótica industrial. Hoy: 3+ millones 
+                            de robots industriales trabajando globalmente.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1989 - WWW -->
+                <div class="timeline-event featured-event" data-year="1989" data-era="digital">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-detailed">
+                        <div class="timeline-header">
+                            <span class="timeline-year">1989</span>
+                            <span class="timeline-category">🌐 Internet</span>
+                            <span class="timeline-badge">Milestone</span>
+                        </div>
+                        <h3>Invención de la World Wide Web</h3>
+                        <p><strong>Creador:</strong> Tim Berners-Lee (CERN)</p>
+                        <p>Propuesta de un sistema de información distribuido usando hipertexto.</p>
+                        <div class="timeline-impact">
+                            <strong>Impacto:</strong> Habilitó automatización global distribuida. Hoy: 
+                            5.3 mil millones de usuarios, $4.5 trillones en valor económico anual.
+                        </div>
+                        <div class="timeline-quote">
+                            "La Web es más una innovación social que técnica. La diseñé para efecto social 
+                            — ayudar a las personas a trabajar juntas — y no como juguete técnico."
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2004 - Facebook -->
+                <div class="timeline-event" data-year="2004" data-era="moderna">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-detailed">
+                        <div class="timeline-header">
+                            <span class="timeline-year">2004</span>
+                            <span class="timeline-category">📱 Social</span>
+                        </div>
+                        <h3>Facebook y Automatización de Conexiones</h3>
+                        <p><strong>Fundador:</strong> Mark Zuckerberg</p>
+                        <p>Algoritmos que automatizan la curación de contenido y conexiones sociales.</p>
+                        <div class="timeline-impact">
+                            <strong>Impacto:</strong> Automatización de relaciones humanas. 3 mil millones 
+                            de usuarios. Cambió cómo nos comunicamos, trabajamos y consumimos información.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2016 - AlphaGo -->
+                <div class="timeline-event" data-year="2016" data-era="moderna">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-detailed">
+                        <div class="timeline-header">
+                            <span class="timeline-year">2016</span>
+                            <span class="timeline-category">🧠 IA</span>
+                        </div>
+                        <h3>AlphaGo Derrota al Campeón de Go</h3>
+                        <p><strong>Creador:</strong> DeepMind (Google)</p>
+                        <p>IA derrota a Lee Sedol (campeón mundial) 4-1 en el juego más complejo del mundo.</p>
+                        <div class="timeline-impact">
+                            <strong>Impacto:</strong> Demostró que IA puede superar intuición humana en 
+                            dominios complejos. Aceleró inversión en IA: $200 mil millones anuales.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2022 - ChatGPT -->
+                <div class="timeline-event featured-event" data-year="2022" data-era="moderna">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-detailed">
+                        <div class="timeline-header">
+                            <span class="timeline-year">2022</span>
+                            <span class="timeline-category">🤖 IA Generativa</span>
+                            <span class="timeline-badge">Milestone</span>
+                        </div>
+                        <h3>ChatGPT Democratiza la IA</h3>
+                        <p><strong>Creador:</strong> OpenAI</p>
+                        <p>Primer chatbot IA accesible al público. 100 millones de usuarios en 2 meses.</p>
+                        <div class="timeline-stats">
+                            <div><strong>Usuarios:</strong> 100M en 60 días</div>
+                            <div><strong>Comparación:</strong> Instagram tardó 2.5 años</div>
+                            <div><strong>Hoy:</strong> 200M+ usuarios semanales</div>
+                        </div>
+                        <div class="timeline-impact">
+                            <strong>Impacto:</strong> Automatización de trabajo cognitivo (escritura, 
+                            código, análisis). Debate global sobre futuro del trabajo.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2024 - Tu Historia -->
+                <div class="timeline-event your-event" data-year="2024" data-era="moderna">
+                    <div class="timeline-marker pulsing"></div>
+                    <div class="timeline-content-detailed">
+                        <div class="timeline-header">
+                            <span class="timeline-year">2024</span>
+                            <span class="timeline-category">🐔 Avicultura</span>
+                            <span class="timeline-badge">Tu Historia</span>
+                        </div>
+                        <h3>Mi Primera Automatización</h3>
+                        <p><strong>Creador:</strong> Tú</p>
+                        <p>Primera línea de código Python para automatizar procesos de granja avícola.</p>
+                        <div class="timeline-stats">
+                            <div><strong>Día 1:</strong> 211 archivos organizados</div>
+                            <div><strong>Semana 3:</strong> Dashboard con 5 gráficos</div>
+                            <div><strong>Racha:</strong> 17 días consecutivos</div>
+                        </div>
+                        <div class="timeline-impact">
+                            <strong>Tu impacto:</strong> De procesos manuales de 3 horas a automatización 
+                            en 3 segundos. De 0 conocimiento a sistemas funcionales en 17 días.
+                        </div>
+                        <div class="timeline-quote">
+                            "No importa cuándo empieces. Lo que importa es que empezaste."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto en la Sociedad -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Impacto en la Sociedad</h2>
+            
+            <div class="impact-grid">
+                <div class="impact-card positive">
+                    <div class="impact-icon">✅</div>
+                    <h3>Beneficios</h3>
+                    <ul>
+                        <li><strong>Productividad 100x:</strong> Lo que tardaba días ahora tarda minutos</li>
+                        <li><strong>Seguridad:</strong> Robots en trabajos peligrosos (minería, rescate)</li>
+                        <li><strong>Precisión:</strong> Cirugías robóticas con 0.01mm de precisión</li>
+                        <li><strong>Disponibilidad:</strong> Sistemas 24/7 sin cansancio</li>
+                        <li><strong>Costo reducido:</strong> Productos accesibles para más personas</li>
+                        <li><strong>Calidad de vida:</strong> Más tiempo para creatividad y familia</li>
+                    </ul>
+                </div>
+
+                <div class="impact-card negative">
+                    <div class="impact-icon">⚠️</div>
+                    <h3>Desafíos</h3>
+                    <ul>
+                        <li><strong>Desempleo:</strong> 85M empleos eliminados para 2025 (WEF)</li>
+                        <li><strong>Desigualdad:</strong> Brecha entre quienes controlan automatización y quienes no</li>
+                        <li><strong>Dependencia:</strong> Sistemas críticos vulnerable a fallos</li>
+                        <li><strong>Privacidad:</strong> Automatización de vigilancia y tracking</li>
+                        <li><strong>Pérdida de habilidades:</strong> Generaciones sin skills manuales</li>
+                        <li><strong>Impacto ambiental:</strong> E-waste y consumo energético</li>
+                    </ul>
+                </div>
+
+                <div class="impact-card balanced">
+                    <div class="impact-icon">⚖️</div>
+                    <h3>Balance Necesario</h3>
+                    <ul>
+                        <li><strong>Educación continua:</strong> Aprender a trabajar CON automatización</li>
+                        <li><strong>Regulación inteligente:</strong> Proteger trabajadores sin frenar innovación</li>
+                        <li><strong>Distribución equitativa:</strong> Beneficios compartidos, no concentrados</li>
+                        <li><strong>Enfoque humano:</strong> Automatizar lo repetitivo, potenciar lo creativo</li>
+                        <li><strong>Sostenibilidad:</strong> Green automation, energía renovable</li>
+                        <li><strong>Ética en diseño:</strong> Automatización que sirve a la humanidad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Capítulo 2: Historia</h4>
+                    <p>De Jacquard a ChatGPT: 223 años de automatización explicados 
+                    con contexto, personas y su impacto real.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Próximo Capítulo</h4>
+                    <ul>
+                        <li><a href="conceptos.html">Conceptos Fundamentales</a></li>
+                        <li><a href="../index.html#proyectos">Mis Proyectos</a></li>
+                        <li><a href="../index.html">Volver al Inicio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Fuentes</h4>
+                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">
+                        Computer History Museum, IEEE, World Economic Forum, 
+                        MIT Technology Review, biografías oficiales.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Viaje en Automatización | Investigado y escrito con 💻 y 📚</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/historia.js"></script>
+</body>
+</html>
