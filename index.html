@@ -2,401 +2,684 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Mi Viaje en Automatización | Del Código a la Granja Inteligente</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0c12;
+            color: #eef2ff;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #11161f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 12, 18, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 1rem 0;
+            transition: all 0.2s;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .logo-emoji {
+            font-size: 1.8rem;
+            background: none;
+            -webkit-background-clip: unset;
+            color: #60a5fa;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #cbd5e6;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #60a5fa;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 4px;
+        }
+        .menu-btn {
+            display: none;
+            font-size: 1.6rem;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 0;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .menu-btn {
+                display: block;
+            }
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 5rem 0 4rem;
+            background: radial-gradient(ellipse 70% 50% at 20% 30%, rgba(59,130,246,0.08), transparent);
+            border-bottom: 1px solid rgba(59,130,246,0.15);
+        }
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #ffffff, #a5c9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #9ca3af;
+            max-width: 600px;
+            margin: 1.5rem 0 2rem;
+        }
+        .hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .stat-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(59,130,246,0.3);
+            border-radius: 24px;
+            padding: 1rem 1.8rem;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .stat-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-4px);
+            background: rgba(59,130,246,0.1);
+        }
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #60a5fa;
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #9ca3af;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-primary {
+            background: linear-gradient(95deg, #3b82f6, #2563eb);
+            color: white;
+            box-shadow: 0 8px 20px rgba(59,130,246,0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(59,130,246,0.4);
+        }
+        .btn-secondary {
+            border: 1px solid #3b82f6;
+            color: #60a5fa;
+            background: transparent;
+        }
+        .btn-secondary:hover {
+            background: rgba(59,130,246,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* section */
+        .section {
+            padding: 5rem 0;
+        }
+        .section-dark {
+            background: #070a10;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, transparent);
+        }
+        .section-subtitle {
+            color: #9ca3af;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        /* grid & cards */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 2rem;
+        }
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .definition-card, .timeline-preview, .quote-card {
+            background: rgba(18, 25, 45, 0.6);
+            backdrop-filter: blur(8px);
+            border-radius: 28px;
+            border: 1px solid rgba(59,130,246,0.2);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .automation-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .type-card {
+            background: #0f172a;
+            border-radius: 20px;
+            padding: 1rem;
+            text-align: center;
+            transition: 0.2s;
+        }
+        .type-card:hover { transform: translateY(-5px); border: 1px solid #3b82f6; }
+
+        /* timeline */
+        .timeline-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, #3b82f6, #60a5fa, #3b82f6);
+        }
+        .timeline-block {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            margin-bottom: 2rem;
+            width: 50%;
+        }
+        .timeline-block.left {
+            left: 0;
+            justify-content: flex-start;
+        }
+        .timeline-block.right {
+            left: 50%;
+        }
+        .timeline-content {
+            background: #0f172a;
+            border-radius: 20px;
+            padding: 1rem 1.5rem;
+            width: 85%;
+            border: 1px solid rgba(59,130,246,0.2);
+            transition: 0.2s;
+        }
+        .timeline-content:hover {
+            border-color: #3b82f6;
+            transform: scale(1.02);
+        }
+        .timeline-tag {
+            background: #1e293b;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+        }
+        @media (max-width: 700px) {
+            .timeline-container::before { left: 20px; }
+            .timeline-block { width: 100%; left: 0 !important; justify-content: flex-start; padding-left: 40px; }
+            .timeline-block.right { left: 0; }
+        }
+        /* journey cards */
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+        .week-card {
+            background: #0f172a;
+            border-radius: 28px;
+            padding: 1.6rem;
+            border: 1px solid #1e2d47;
+            transition: all 0.25s;
+        }
+        .week-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-6px);
+        }
+        .week-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        .week-number {
+            font-weight: 800;
+            background: #3b82f620;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+        }
+        .week-status {
+            color: #34d399;
+        }
+        .achievements {
+            margin: 1rem 0;
+            padding-left: 1.2rem;
+        }
+        .achievements li {
+            margin: 0.5rem 0;
+        }
+        /* projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #0f172a;
+            border-radius: 28px;
+            overflow: hidden;
+            transition: 0.25s;
+        }
+        .project-card.featured {
+            border: 1px solid #3b82f6;
+            box-shadow: 0 0 20px rgba(59,130,246,0.2);
+        }
+        .project-image {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            padding: 2rem;
+            text-align: center;
+            font-size: 3rem;
+        }
+        .project-badge {
+            background: #3b82f6;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+        }
+        .project-content {
+            padding: 1.5rem;
+        }
+        .project-tags {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        .tag {
+            background: #1e293b;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+        }
+        .footer {
+            background: #03050a;
+            padding: 3rem 0 1rem;
+            border-top: 1px solid #1e2d47;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            gap: 2rem;
+        }
+        .progress-bar {
+            background: #1e293b;
+            border-radius: 20px;
+            height: 8px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+        .progress-fill {
+            background: #3b82f6;
+            width: 6%;
+            height: 100%;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #3b82f6;
+            width: 44px;
+            height: 44px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: 0.2s;
+            box-shadow: 0 4px 12px black;
+        }
+        .back-to-top.show {
+            opacity: 1;
+        }
+        /* animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-    <!-- Navegación -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <span class="logo-emoji">🤖</span>
-                <span class="logo-text">AutoDoc</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#inicio" class="active">Inicio</a></li>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#mi-viaje">Mi Viaje</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#conceptos">Conceptos</a></li>
-            </ul>
+
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <span class="logo-emoji">🤖</span>
+            <span class="logo-text">AutoDoc</span>
         </div>
-    </nav>
+        <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#mi-viaje">Mi Viaje</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#conceptos">Conceptos</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Del <span class="highlight">Código Manual</span><br>
-                    a la <span class="highlight">Granja Automatizada</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Un documental interactivo de mi viaje transformando una granja avícola 
-                    con Python, SQL y Automatización
-                </p>
-                <div class="hero-stats">
-                    <div class="stat-card">
-                        <div class="stat-number" id="diasRacha">17</div>
-                        <div class="stat-label">Días de Racha</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="lineasCodigo">5,000+</div>
-                        <div class="stat-label">Líneas de Código</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="proyectos">8</div>
-                        <div class="stat-label">Proyectos Reales</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="semanas">3/48</div>
-                        <div class="stat-label">Semanas</div>
-                    </div>
-                </div>
-                <div class="cta-buttons">
-                    <a href="#mi-viaje" class="btn btn-primary">Ver Mi Viaje</a>
-                    <a href="#proyectos" class="btn btn-secondary">Explorar Proyectos</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ¿Qué es Automatización? -->
-    <section id="que-es" class="section">
-        <div class="container">
-            <h2 class="section-title">¿Qué es la Automatización?</h2>
-            <div class="content-grid">
-                <div class="content-main">
-                    <p class="intro-text">
-                        La <strong>automatización</strong> es el uso de tecnología para realizar tareas 
-                        sin intervención humana constante. Desde los telares automáticos de 1801 
-                        hasta los sistemas de IA actuales, la humanidad ha buscado maneras de 
-                        hacer que las máquinas trabajen por nosotros.
-                    </p>
-                    
-                    <div class="definition-card">
-                        <div class="definition-icon">🎯</div>
-                        <div class="definition-content">
-                            <h3>En mi contexto</h3>
-                            <p>
-                                Transformar procesos manuales de una granja avícola (contar huevos, 
-                                registrar mortalidad, generar reportes) en sistemas automatizados 
-                                que funcionan con un clic.
-                            </p>
-                        </div>
-                    </div>
-
-                    <h3>Tipos de Automatización</h3>
-                    <div class="automation-types">
-                        <div class="type-card">
-                            <div class="type-icon">🏭</div>
-                            <h4>Industrial</h4>
-                            <p>Robots en fábricas, líneas de ensamblaje</p>
-                        </div>
-                        <div class="type-card">
-                            <div class="type-icon">💻</div>
-                            <h4>Software</h4>
-                            <p>Scripts, bots, procesamiento de datos</p>
-                        </div>
-                        <div class="type-card">
-                            <div class="type-icon">🏠</div>
-                            <h4>Doméstica</h4>
-                            <p>Smart homes, electrodomésticos inteligentes</p>
-                        </div>
-                        <div class="type-card">
-                            <div class="type-icon">🌾</div>
-                            <h4>Agrícola</h4>
-                            <p>Sistemas de riego, monitoreo de cultivos</p>
-                        </div>
-                    </div>
-                </div>
-
-                <aside class="sidebar">
-                    <div class="timeline-preview">
-                        <h3>Timeline Rápido</h3>
-                        <div class="timeline-item">
-                            <div class="year">1801</div>
-                            <div class="event">Telar automático de Jacquard</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="year">1913</div>
-                            <div class="event">Línea de ensamblaje de Ford</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="year">1961</div>
-                            <div class="event">Primer robot industrial (Unimate)</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="year">2024</div>
-                            <div class="event highlight-event">Mi primer script automatizado 🎉</div>
-                        </div>
-                    </div>
-
-                    <div class="quote-card">
-                        <div class="quote-icon">"</div>
-                        <p class="quote-text">
-                            La automatización no es el enemigo. La ignorancia sobre cómo usarla, sí lo es.
-                        </p>
-                        <p class="quote-author">— Elon Musk</p>
-                    </div>
-                </aside>
-            </div>
-        </div>
-    </section>
-
-    <!-- Historia de la Automatización -->
-    <section id="historia" class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">Historia de la Automatización</h2>
-            
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
-                
-                <div class="timeline-block left">
-                    <div class="timeline-content">
-                        <h3>1801 - El Telar de Jacquard</h3>
-                        <p><strong>Joseph Marie Jacquard</strong> crea el primer sistema programable 
-                        usando tarjetas perforadas para controlar patrones de tejido.</p>
-                        <span class="timeline-tag">🧵 Textil</span>
-                    </div>
-                </div>
-
-                <div class="timeline-block right">
-                    <div class="timeline-content">
-                        <h3>1913 - Línea de Ensamblaje</h3>
-                        <p><strong>Henry Ford</strong> revoluciona la manufactura con la cadena 
-                        de montaje automatizada. Tiempo de producción: 12h → 93 minutos.</p>
-                        <span class="timeline-tag">🚗 Automotriz</span>
-                    </div>
-                </div>
-
-                <div class="timeline-block left">
-                    <div class="timeline-content">
-                        <h3>1842 - Primera Programadora</h3>
-                        <p><strong>Ada Lovelace</strong> escribe el primer algoritmo 
-                        destinado a ser procesado por una máquina (motor analítico de Babbage).</p>
-                        <span class="timeline-tag">💻 Computación</span>
-                    </div>
-                </div>
-
-                <div class="timeline-block right">
-                    <div class="timeline-content">
-                        <h3>1961 - Unimate</h3>
-                        <p><strong>George Devol</strong> instala el primer robot industrial 
-                        en General Motors para manejar piezas de metal caliente.</p>
-                        <span class="timeline-tag">🤖 Robótica</span>
-                    </div>
-                </div>
-
-                <div class="timeline-block left">
-                    <div class="timeline-content">
-                        <h3>1989 - World Wide Web</h3>
-                        <p><strong>Tim Berners-Lee</strong> inventa la web, permitiendo 
-                        automatización distribuida globalmente.</p>
-                        <span class="timeline-tag">🌐 Internet</span>
-                    </div>
-                </div>
-
-                <div class="timeline-block right">
-                    <div class="timeline-content">
-                        <h3>2024 - Mi Viaje Comienza</h3>
-                        <p>Primera línea de código Python para automatizar procesos 
-                        en granja avícola. 211 archivos organizados automáticamente.</p>
-                        <span class="timeline-tag">🐔 Avicultura</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mi Viaje -->
-    <section id="mi-viaje" class="section">
-        <div class="container">
-            <h2 class="section-title">Mi Viaje de Aprendizaje</h2>
-            <p class="section-subtitle">
-                De cero conocimiento a sistemas automatizados funcionales en 17 días
+<section id="inicio" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Del <span class="highlight">Código Manual</span><br>
+                a la <span class="highlight">Granja Automatizada</span>
+            </h1>
+            <p class="hero-subtitle">
+                Un documental interactivo de mi viaje transformando una granja avícola 
+                con Python, SQL y Automatización
             </p>
-
-            <div class="journey-grid">
-                <div class="week-card week-1">
-                    <div class="week-header">
-                        <span class="week-number">Semana 1</span>
-                        <span class="week-status">✅ Completada</span>
-                    </div>
-                    <h3>Fundamentos + Primera Automatización</h3>
-                    <ul class="achievements">
-                        <li>🎯 Git + GitHub dominado</li>
-                        <li>📦 Organizador de archivos (211 archivos)</li>
-                        <li>📊 Dashboard visual con pandas</li>
-                        <li>🧹 Limpiador de CSV profesional</li>
-                    </ul>
-                    <div class="week-stats">
-                        <span>7 días consecutivos</span>
-                        <span>4 proyectos</span>
-                    </div>
-                </div>
-
-                <div class="week-card week-2">
-                    <div class="week-header">
-                        <span class="week-number">Semana 2</span>
-                        <span class="week-status">✅ Completada</span>
-                    </div>
-                    <h3>Fundamentos Computacionales</h3>
-                    <ul class="achievements">
-                        <li>🧠 Referencias vs Copias</li>
-                        <li>⚡ Big O Notation (1000x optimización)</li>
-                        <li>📚 Estructuras de datos</li>
-                        <li>🔄 Recursión (primer algoritmo propio)</li>
-                    </ul>
-                    <div class="week-stats">
-                        <span>5 días perfectos</span>
-                        <span>4 challenges 100%</span>
-                    </div>
-                </div>
-
-                <div class="week-card week-3">
-                    <div class="week-header">
-                        <span class="week-number">Semana 3</span>
-                        <span class="week-status">✅ Completada</span>
-                    </div>
-                    <h3>Algoritmos + SQL + Dashboard</h3>
-                    <ul class="achievements">
-                        <li>🔍 Búsqueda binaria (1303x más rápida)</li>
-                        <li>🗄️ Primera base de datos SQL</li>
-                        <li>🔗 JOINs y queries avanzadas</li>
-                        <li>📊 Dashboard visual con 5 gráficos</li>
-                    </ul>
-                    <div class="week-stats">
-                        <span>5 días completados</span>
-                        <span>1 proyecto integrador</span>
-                    </div>
-                </div>
-
-                <div class="week-card week-future">
-                    <div class="week-header">
-                        <span class="week-number">Semana 4+</span>
-                        <span class="week-status">🚀 En progreso</span>
-                    </div>
-                    <h3>Sitio Web + Portfolio</h3>
-                    <ul class="achievements">
-                        <li>🌐 HTML + CSS + JavaScript</li>
-                        <li>📝 Documental interactivo</li>
-                        <li>🎨 Diseño profesional</li>
-                        <li>🚀 Deploy en internet</li>
-                    </ul>
-                    <div class="week-stats">
-                        <span>En desarrollo</span>
-                        <span>45 semanas restantes</span>
-                    </div>
-                </div>
+            <div class="hero-stats">
+                <div class="stat-card"><div class="stat-number" id="diasRacha">17</div><div class="stat-label">Días de Racha</div></div>
+                <div class="stat-card"><div class="stat-number" id="lineasCodigo">5,000+</div><div class="stat-label">Líneas de Código</div></div>
+                <div class="stat-card"><div class="stat-number" id="proyectos">8</div><div class="stat-label">Proyectos Reales</div></div>
+                <div class="stat-card"><div class="stat-number" id="semanas">3/48</div><div class="stat-label">Semanas</div></div>
+            </div>
+            <div class="cta-buttons">
+                <a href="#mi-viaje" class="btn btn-primary">Ver Mi Viaje <i class="fas fa-arrow-right"></i></a>
+                <a href="#proyectos" class="btn btn-secondary">Explorar Proyectos</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Proyectos Destacados -->
-    <section id="proyectos" class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">Proyectos Reales</h2>
-            
-            <div class="projects-grid">
-                <div class="project-card featured">
-                    <div class="project-image">
-                        <div class="project-badge">Featured</div>
-                        <div class="placeholder-img">📊</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Dashboard Granja Avícola</h3>
-                        <p>Sistema completo con SQL + Python + Visualizaciones que genera 
-                        5 gráficos profesionales automáticamente.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">SQLite</span>
-                            <span class="tag">Matplotlib</span>
-                        </div>
-                        <div class="project-stats">
-                            <span>🎯 Día 17</span>
-                            <span>⚡ 18,250 registros</span>
-                            <span>📈 5 gráficos</span>
-                        </div>
-                    </div>
+<!-- seccion automatización -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">¿Qué es la Automatización?</h2>
+        <div class="content-grid">
+            <div class="content-main">
+                <p class="intro-text">La <strong>automatización</strong> es el uso de tecnología para realizar tareas sin intervención humana constante. Desde los telares automáticos hasta la IA, hemos buscado que las máquinas trabajen por nosotros.</p>
+                <div class="definition-card">
+                    <div class="definition-icon">🎯</div>
+                    <div class="definition-content"><h3>En mi contexto</h3><p>Transformar procesos manuales de una granja avícola (contar huevos, registrar mortalidad, generar reportes) en sistemas automatizados que funcionan con un clic.</p></div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-img">📁</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Organizador Inteligente</h3>
-                        <p>Script que organiza archivos automáticamente por tipo, 
-                        con logs y reportes JSON.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">CLI</span>
-                        </div>
-                        <div class="project-stats">
-                            <span>🎯 Día 1-3</span>
-                            <span>📦 211 archivos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-img">🧹</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Limpiador CSV</h3>
-                        <p>Herramienta que limpia datos sucios: duplicados, nulos, 
-                        formatos inconsistentes.</p>
-                        <div class="project-tags">
-                            <span class="tag">Pandas</span>
-                            <span class="tag">Data Cleaning</span>
-                        </div>
-                        <div class="project-stats">
-                            <span>🎯 Día 6</span>
-                            <span>🧹 456 → 319 filas</span>
-                        </div>
-                    </div>
+                <h3>Tipos de Automatización</h3>
+                <div class="automation-types">
+                    <div class="type-card"><div class="type-icon">🏭</div><h4>Industrial</h4><p>Robots en fábricas</p></div>
+                    <div class="type-card"><div class="type-icon">💻</div><h4>Software</h4><p>Scripts, bots, datos</p></div>
+                    <div class="type-card"><div class="type-icon">🏠</div><h4>Doméstica</h4><p>Smart homes</p></div>
+                    <div class="type-card"><div class="type-icon">🌾</div><h4>Agrícola</h4><p>Monitoreo inteligente</p></div>
                 </div>
             </div>
+            <aside class="sidebar">
+                <div class="timeline-preview"><h3>Timeline Rápido</h3>
+                    <div class="timeline-item"><div class="year">1801</div><div class="event">Telar automático</div></div>
+                    <div class="timeline-item"><div class="year">1913</div><div class="event">Línea Ford</div></div>
+                    <div class="timeline-item"><div class="year">1961</div><div class="event">Robot Unimate</div></div>
+                    <div class="timeline-item"><div class="year">2024</div><div class="event highlight-event">✨ Mi primer script</div></div>
+                </div>
+                <div class="quote-card"><div class="quote-icon">"</div><p class="quote-text">La automatización no es el enemigo. La ignorancia sobre cómo usarla, sí lo es.</p><p class="quote-author">— Elon Musk</p></div>
+            </aside>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Sobre Este Proyecto</h4>
-                    <p>Documental interactivo de mi viaje aprendiendo automatización 
-                    y programación aplicada a una granja avícola real.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Tecnologías</h4>
-                    <ul>
-                        <li>Python 3.x</li>
-                        <li>SQLite</li>
-                        <li>Pandas + Matplotlib</li>
-                        <li>HTML + CSS + JavaScript</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Progreso</h4>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 6%"></div>
-                    </div>
-                    <p>Semana 3/48 (6%) - Racha: 17 días 🔥</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Mi Viaje en Automatización | Construido con 💻 y ☕</p>
-            </div>
+<section id="historia" class="section section-dark">
+    <div class="container">
+        <h2 class="section-title">Historia de la Automatización</h2>
+        <div class="timeline-container">
+            <div class="timeline-block left"><div class="timeline-content"><h3>1801 - Telar de Jacquard</h3><p>Primer sistema programable con tarjetas perforadas.</p><span class="timeline-tag">🧵 Textil</span></div></div>
+            <div class="timeline-block right"><div class="timeline-content"><h3>1913 - Línea de Ensamblaje</h3><p>Ford revoluciona la manufactura: 12h → 93 min.</p><span class="timeline-tag">🚗 Automotriz</span></div></div>
+            <div class="timeline-block left"><div class="timeline-content"><h3>1842 - Ada Lovelace</h3><p>Primera programadora de la historia.</p><span class="timeline-tag">💻 Computación</span></div></div>
+            <div class="timeline-block right"><div class="timeline-content"><h3>1961 - Unimate</h3><p>Primer robot industrial en GM.</p><span class="timeline-tag">🤖 Robótica</span></div></div>
+            <div class="timeline-block left"><div class="timeline-content"><h3>1989 - World Wide Web</h3><p>Automatización global.</p><span class="timeline-tag">🌐 Internet</span></div></div>
+            <div class="timeline-block right"><div class="timeline-content"><h3>2024 - Mi Viaje</h3><p>Python automatizando granja avícola. 211 archivos organizados.</p><span class="timeline-tag">🐔 Avicultura</span></div></div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="js/main.js"></script>
+<section id="mi-viaje" class="section">
+    <div class="container">
+        <h2 class="section-title">Mi Viaje de Aprendizaje</h2>
+        <p class="section-subtitle">De cero conocimiento a sistemas automatizados funcionales en 17 días</p>
+        <div class="journey-grid">
+            <div class="week-card"><div class="week-header"><span class="week-number">Semana 1</span><span class="week-status">✅</span></div><h3>Fundamentos + Primera Automatización</h3><ul class="achievements"><li>🎯 Git + GitHub dominado</li><li>📦 Organizador de archivos (211 archivos)</li><li>📊 Dashboard visual con pandas</li><li>🧹 Limpiador de CSV profesional</li></ul><div class="week-stats"><span>7 días consecutivos</span><span>4 proyectos</span></div></div>
+            <div class="week-card"><div class="week-header"><span class="week-number">Semana 2</span><span class="week-status">✅</span></div><h3>Fundamentos Computacionales</h3><ul class="achievements"><li>🧠 Referencias vs Copias</li><li>⚡ Big O Notation (1000x optimización)</li><li>📚 Estructuras de datos</li><li>🔄 Recursión</li></ul><div class="week-stats"><span>5 días perfectos</span><span>4 challenges</span></div></div>
+            <div class="week-card"><div class="week-header"><span class="week-number">Semana 3</span><span class="week-status">✅</span></div><h3>Algoritmos + SQL + Dashboard</h3><ul class="achievements"><li>🔍 Búsqueda binaria (1303x más rápida)</li><li>🗄️ Primera base de datos SQL</li><li>🔗 JOINs y queries avanzadas</li><li>📊 Dashboard visual con 5 gráficos</li></ul><div class="week-stats"><span>5 días completados</span><span>1 proyecto integrador</span></div></div>
+            <div class="week-card week-future"><div class="week-header"><span class="week-number">Semana 4+</span><span class="week-status">🚀 En progreso</span></div><h3>Sitio Web + Portfolio</h3><ul class="achievements"><li>🌐 HTML + CSS + JavaScript</li><li>📝 Documental interactivo</li><li>🎨 Diseño profesional</li><li>🚀 Deploy en internet</li></ul><div class="week-stats"><span>En desarrollo</span><span>45 semanas restantes</span></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="proyectos" class="section section-dark">
+    <div class="container">
+        <h2 class="section-title">Proyectos Reales</h2>
+        <div class="projects-grid">
+            <div class="project-card featured"><div class="project-image"><div class="project-badge">Featured</div><div class="placeholder-img">📊</div></div><div class="project-content"><h3>Dashboard Granja Avícola</h3><p>Sistema completo con SQL + Python + Visualizaciones que genera 5 gráficos profesionales automáticamente.</p><div class="project-tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Matplotlib</span></div><div class="project-stats"><span>🎯 Día 17</span><span>⚡ 18,250 registros</span></div></div></div>
+            <div class="project-card"><div class="project-image"><div class="placeholder-img">📁</div></div><div class="project-content"><h3>Organizador Inteligente</h3><p>Script que organiza archivos automáticamente por tipo, con logs y reportes JSON.</p><div class="project-tags"><span class="tag">Python</span><span class="tag">CLI</span></div><div class="project-stats"><span>🎯 Día 1-3</span><span>📦 211 archivos</span></div></div></div>
+            <div class="project-card"><div class="project-image"><div class="placeholder-img">🧹</div></div><div class="project-content"><h3>Limpiador CSV</h3><p>Herramienta que limpia datos sucios: duplicados, nulos, formatos inconsistentes.</p><div class="project-tags"><span class="tag">Pandas</span><span class="tag">Data Cleaning</span></div><div class="project-stats"><span>🎯 Día 6</span><span>🧹 456 → 319 filas</span></div></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="conceptos" class="section">
+    <div class="container">
+        <h2 class="section-title">Conceptos Clave</h2>
+        <div class="automation-types" style="grid-template-columns: repeat(auto-fit, minmax(200px,1fr));">
+            <div class="type-card"><i class="fas fa-code"></i><h4>Scripting</h4><p>Automatización de tareas repetitivas</p></div>
+            <div class="type-card"><i class="fas fa-database"></i><h4>Bases de Datos</h4><p>SQL, consultas optimizadas</p></div>
+            <div class="type-card"><i class="fas fa-chart-line"></i><h4>Visualización</h4><p>Dashboards interactivos</p></div>
+            <div class="type-card"><i class="fas fa-brain"></i><h4>Algoritmos</h4><p>Búsqueda, ordenamiento, recursión</p></div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h4>Sobre Este Proyecto</h4><p>Documental interactivo de mi viaje aprendiendo automatización aplicada a una granja avícola real.</p></div>
+            <div class="footer-section"><h4>Tecnologías</h4><ul><li>Python 3.x</li><li>SQLite</li><li>Pandas + Matplotlib</li><li>HTML/CSS/JS</li></ul></div>
+            <div class="footer-section"><h4>Progreso</h4><div class="progress-bar"><div class="progress-fill" style="width:6%"></div></div><p>Semana 3/48 (6%) - Racha: 17 días 🔥</p></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 Mi Viaje en Automatización | Construido con 💻 y ☕</p></div>
+    </div>
+</footer>
+<div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+<script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    if(menuToggle) {
+        menuToggle.addEventListener('click', () => navLinks.classList.toggle('show'));
+    }
+
+    // Active link highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.nav-links a');
+    function updateActive() {
+        let scrollPos = window.scrollY + 120;
+        sections.forEach(sec => {
+            const top = sec.offsetTop;
+            const bottom = top + sec.offsetHeight;
+            if(scrollPos >= top && scrollPos < bottom) {
+                const id = sec.getAttribute('id');
+                navItems.forEach(link => {
+                    link.classList.remove('active');
+                    if(link.getAttribute('href') === '#'+id) link.classList.add('active');
+                });
+            }
+        });
+    }
+    window.addEventListener('scroll', updateActive);
+    updateActive();
+
+    // Back to top
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 500) backBtn.classList.add('show');
+        else backBtn.classList.remove('show');
+    });
+    backBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+    // Animate counters on stats when visible
+    function animateNumber(element, final, suffix='') {
+        let start = 0;
+        const duration = 1200;
+        const step = Math.ceil(final / (duration/16));
+        const timer = setInterval(() => {
+            start += step;
+            if(start >= final) {
+                element.innerText = final + suffix;
+                clearInterval(timer);
+            } else element.innerText = start + suffix;
+        }, 16);
+    }
+    const statNumbers = [
+        {el: document.getElementById('diasRacha'), val: 17, suffix: ''},
+        {el: document.getElementById('lineasCodigo'), val: 5200, suffix: '+'},
+        {el: document.getElementById('proyectos'), val: 8, suffix: ''},
+        {el: document.getElementById('semanas'), val: 3, suffix: '/48'}
+    ];
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                statNumbers.forEach(s => {
+                    if(s.el && s.el.innerText.includes('+') === false && s.el.innerText !== String(s.val)) {
+                        if(s.suffix === '/48') s.el.innerText = s.val + '/48';
+                        else animateNumber(s.el, s.val, s.suffix);
+                    }
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {threshold:0.5});
+    const heroStats = document.querySelector('.hero-stats');
+    if(heroStats) observer.observe(heroStats);
+
+    // fade-up animation on scroll
+    const fadeElements = document.querySelectorAll('.week-card, .project-card, .timeline-block, .definition-card');
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if(e.isIntersecting) e.target.classList.add('visible');
+            else e.target.classList.remove('visible');
+        });
+    }, {threshold:0.1});
+    fadeElements.forEach(el => {
+        el.classList.add('fade-up');
+        fadeObserver.observe(el);
+    });
+</script>
 </body>
 </html>
