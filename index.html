@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Viaje en Automatización | Del Código a la Granja Inteligente</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-emoji">🤖</span>
+                <span class="logo-text">AutoDoc</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#mi-viaje">Mi Viaje</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#conceptos">Conceptos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Del <span class="highlight">Código Manual</span><br>
+                    a la <span class="highlight">Granja Automatizada</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Un documental interactivo de mi viaje transformando una granja avícola 
+                    con Python, SQL y Automatización
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="diasRacha">17</div>
+                        <div class="stat-label">Días de Racha</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="lineasCodigo">5,000+</div>
+                        <div class="stat-label">Líneas de Código</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="proyectos">8</div>
+                        <div class="stat-label">Proyectos Reales</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="semanas">3/48</div>
+                        <div class="stat-label">Semanas</div>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#mi-viaje" class="btn btn-primary">Ver Mi Viaje</a>
+                    <a href="#proyectos" class="btn btn-secondary">Explorar Proyectos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Qué es Automatización? -->
+    <section id="que-es" class="section">
+        <div class="container">
+            <h2 class="section-title">¿Qué es la Automatización?</h2>
+            <div class="content-grid">
+                <div class="content-main">
+                    <p class="intro-text">
+                        La <strong>automatización</strong> es el uso de tecnología para realizar tareas 
+                        sin intervención humana constante. Desde los telares automáticos de 1801 
+                        hasta los sistemas de IA actuales, la humanidad ha buscado maneras de 
+                        hacer que las máquinas trabajen por nosotros.
+                    </p>
+                    
+                    <div class="definition-card">
+                        <div class="definition-icon">🎯</div>
+                        <div class="definition-content">
+                            <h3>En mi contexto</h3>
+                            <p>
+                                Transformar procesos manuales de una granja avícola (contar huevos, 
+                                registrar mortalidad, generar reportes) en sistemas automatizados 
+                                que funcionan con un clic.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>Tipos de Automatización</h3>
+                    <div class="automation-types">
+                        <div class="type-card">
+                            <div class="type-icon">🏭</div>
+                            <h4>Industrial</h4>
+                            <p>Robots en fábricas, líneas de ensamblaje</p>
+                        </div>
+                        <div class="type-card">
+                            <div class="type-icon">💻</div>
+                            <h4>Software</h4>
+                            <p>Scripts, bots, procesamiento de datos</p>
+                        </div>
+                        <div class="type-card">
+                            <div class="type-icon">🏠</div>
+                            <h4>Doméstica</h4>
+                            <p>Smart homes, electrodomésticos inteligentes</p>
+                        </div>
+                        <div class="type-card">
+                            <div class="type-icon">🌾</div>
+                            <h4>Agrícola</h4>
+                            <p>Sistemas de riego, monitoreo de cultivos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="timeline-preview">
+                        <h3>Timeline Rápido</h3>
+                        <div class="timeline-item">
+                            <div class="year">1801</div>
+                            <div class="event">Telar automático de Jacquard</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">1913</div>
+                            <div class="event">Línea de ensamblaje de Ford</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">1961</div>
+                            <div class="event">Primer robot industrial (Unimate)</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2024</div>
+                            <div class="event highlight-event">Mi primer script automatizado 🎉</div>
+                        </div>
+                    </div>
+
+                    <div class="quote-card">
+                        <div class="quote-icon">"</div>
+                        <p class="quote-text">
+                            La automatización no es el enemigo. La ignorancia sobre cómo usarla, sí lo es.
+                        </p>
+                        <p class="quote-author">— Elon Musk</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia de la Automatización -->
+    <section id="historia" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Historia de la Automatización</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-block left">
+                    <div class="timeline-content">
+                        <h3>1801 - El Telar de Jacquard</h3>
+                        <p><strong>Joseph Marie Jacquard</strong> crea el primer sistema programable 
+                        usando tarjetas perforadas para controlar patrones de tejido.</p>
+                        <span class="timeline-tag">🧵 Textil</span>
+                    </div>
+                </div>
+
+                <div class="timeline-block right">
+                    <div class="timeline-content">
+                        <h3>1913 - Línea de Ensamblaje</h3>
+                        <p><strong>Henry Ford</strong> revoluciona la manufactura con la cadena 
+                        de montaje automatizada. Tiempo de producción: 12h → 93 minutos.</p>
+                        <span class="timeline-tag">🚗 Automotriz</span>
+                    </div>
+                </div>
+
+                <div class="timeline-block left">
+                    <div class="timeline-content">
+                        <h3>1842 - Primera Programadora</h3>
+                        <p><strong>Ada Lovelace</strong> escribe el primer algoritmo 
+                        destinado a ser procesado por una máquina (motor analítico de Babbage).</p>
+                        <span class="timeline-tag">💻 Computación</span>
+                    </div>
+                </div>
+
+                <div class="timeline-block right">
+                    <div class="timeline-content">
+                        <h3>1961 - Unimate</h3>
+                        <p><strong>George Devol</strong> instala el primer robot industrial 
+                        en General Motors para manejar piezas de metal caliente.</p>
+                        <span class="timeline-tag">🤖 Robótica</span>
+                    </div>
+                </div>
+
+                <div class="timeline-block left">
+                    <div class="timeline-content">
+                        <h3>1989 - World Wide Web</h3>
+                        <p><strong>Tim Berners-Lee</strong> inventa la web, permitiendo 
+                        automatización distribuida globalmente.</p>
+                        <span class="timeline-tag">🌐 Internet</span>
+                    </div>
+                </div>
+
+                <div class="timeline-block right">
+                    <div class="timeline-content">
+                        <h3>2024 - Mi Viaje Comienza</h3>
+                        <p>Primera línea de código Python para automatizar procesos 
+                        en granja avícola. 211 archivos organizados automáticamente.</p>
+                        <span class="timeline-tag">🐔 Avicultura</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mi Viaje -->
+    <section id="mi-viaje" class="section">
+        <div class="container">
+            <h2 class="section-title">Mi Viaje de Aprendizaje</h2>
+            <p class="section-subtitle">
+                De cero conocimiento a sistemas automatizados funcionales en 17 días
+            </p>
+
+            <div class="journey-grid">
+                <div class="week-card week-1">
+                    <div class="week-header">
+                        <span class="week-number">Semana 1</span>
+                        <span class="week-status">✅ Completada</span>
+                    </div>
+                    <h3>Fundamentos + Primera Automatización</h3>
+                    <ul class="achievements">
+                        <li>🎯 Git + GitHub dominado</li>
+                        <li>📦 Organizador de archivos (211 archivos)</li>
+                        <li>📊 Dashboard visual con pandas</li>
+                        <li>🧹 Limpiador de CSV profesional</li>
+                    </ul>
+                    <div class="week-stats">
+                        <span>7 días consecutivos</span>
+                        <span>4 proyectos</span>
+                    </div>
+                </div>
+
+                <div class="week-card week-2">
+                    <div class="week-header">
+                        <span class="week-number">Semana 2</span>
+                        <span class="week-status">✅ Completada</span>
+                    </div>
+                    <h3>Fundamentos Computacionales</h3>
+                    <ul class="achievements">
+                        <li>🧠 Referencias vs Copias</li>
+                        <li>⚡ Big O Notation (1000x optimización)</li>
+                        <li>📚 Estructuras de datos</li>
+                        <li>🔄 Recursión (primer algoritmo propio)</li>
+                    </ul>
+                    <div class="week-stats">
+                        <span>5 días perfectos</span>
+                        <span>4 challenges 100%</span>
+                    </div>
+                </div>
+
+                <div class="week-card week-3">
+                    <div class="week-header">
+                        <span class="week-number">Semana 3</span>
+                        <span class="week-status">✅ Completada</span>
+                    </div>
+                    <h3>Algoritmos + SQL + Dashboard</h3>
+                    <ul class="achievements">
+                        <li>🔍 Búsqueda binaria (1303x más rápida)</li>
+                        <li>🗄️ Primera base de datos SQL</li>
+                        <li>🔗 JOINs y queries avanzadas</li>
+                        <li>📊 Dashboard visual con 5 gráficos</li>
+                    </ul>
+                    <div class="week-stats">
+                        <span>5 días completados</span>
+                        <span>1 proyecto integrador</span>
+                    </div>
+                </div>
+
+                <div class="week-card week-future">
+                    <div class="week-header">
+                        <span class="week-number">Semana 4+</span>
+                        <span class="week-status">🚀 En progreso</span>
+                    </div>
+                    <h3>Sitio Web + Portfolio</h3>
+                    <ul class="achievements">
+                        <li>🌐 HTML + CSS + JavaScript</li>
+                        <li>📝 Documental interactivo</li>
+                        <li>🎨 Diseño profesional</li>
+                        <li>🚀 Deploy en internet</li>
+                    </ul>
+                    <div class="week-stats">
+                        <span>En desarrollo</span>
+                        <span>45 semanas restantes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section id="proyectos" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Proyectos Reales</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-badge">Featured</div>
+                        <div class="placeholder-img">📊</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Dashboard Granja Avícola</h3>
+                        <p>Sistema completo con SQL + Python + Visualizaciones que genera 
+                        5 gráficos profesionales automáticamente.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Matplotlib</span>
+                        </div>
+                        <div class="project-stats">
+                            <span>🎯 Día 17</span>
+                            <span>⚡ 18,250 registros</span>
+                            <span>📈 5 gráficos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img">📁</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Organizador Inteligente</h3>
+                        <p>Script que organiza archivos automáticamente por tipo, 
+                        con logs y reportes JSON.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">CLI</span>
+                        </div>
+                        <div class="project-stats">
+                            <span>🎯 Día 1-3</span>
+                            <span>📦 211 archivos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-img">🧹</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Limpiador CSV</h3>
+                        <p>Herramienta que limpia datos sucios: duplicados, nulos, 
+                        formatos inconsistentes.</p>
+                        <div class="project-tags">
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Data Cleaning</span>
+                        </div>
+                        <div class="project-stats">
+                            <span>🎯 Día 6</span>
+                            <span>🧹 456 → 319 filas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre Este Proyecto</h4>
+                    <p>Documental interactivo de mi viaje aprendiendo automatización 
+                    y programación aplicada a una granja avícola real.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tecnologías</h4>
+                    <ul>
+                        <li>Python 3.x</li>
+                        <li>SQLite</li>
+                        <li>Pandas + Matplotlib</li>
+                        <li>HTML + CSS + JavaScript</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Progreso</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 6%"></div>
+                    </div>
+                    <p>Semana 3/48 (6%) - Racha: 17 días 🔥</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Viaje en Automatización | Construido con 💻 y ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
